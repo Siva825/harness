@@ -1,8 +1,13 @@
-provider "google" {
+ provider "google" {
     project = "siva-477505" 
 }
+
+variable "vm_name" {
+    type = string
+}
+
 resource "google_compute_instance" "instance1" {
-    name = "all-in-one"
+    name = var.vm_name
     zone =  "us-central1-c" 
     machine_type = "e2-medium"
     boot_disk {
