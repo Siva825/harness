@@ -8,7 +8,7 @@ variable "vm_name" {
 
 resource "google_compute_instance" "instance1" {
     name = var.vm_name
-    zone =  "us-central1-c" 
+    zone =  "us-east1-b" 
     machine_type = "e2-medium"
     boot_disk {
       initialize_params {
